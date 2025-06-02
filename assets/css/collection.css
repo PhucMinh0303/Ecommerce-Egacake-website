@@ -1,0 +1,236 @@
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4; /*Thuộc tính CSS thiết lập chiều cao của hộp dòng trong chế độ viết ngang*/
+  margin: 0;
+  padding: 0;
+  background: rgb(230, 225, 225);
+  box-sizing: border-box; /*bao gồm nội dung, phần đệm và đường viền, nhưng không bao gồm lề.*/
+}
+
+/*collection-container*/
+.collection-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 10px;
+  padding: 30px 110px;
+  background: rgb(230, 225, 225);
+  background-size: cover;
+  flex-direction: column;
+}
+.egacake-container img {
+  width: 100%;
+}
+
+.coupon-codes-collection {
+  margin-top: 30px;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  padding: 10px 20px;
+  flex-wrap: nowrap;
+  background-color: rgb(212, 206, 206);
+}
+
+.coupon-collection {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: calc(25% - 10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coupon-collection h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.coupon-collection p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.coupon-collection button {
+  background-color: #ff3c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.coupon-codes-collection .coupon a {
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+}
+/*cake-collection*/
+.cake-collection {
+  display: flex;
+  padding: 30px 110px;
+}
+
+.sidebar-fitter-collection {
+  width: 50%;
+  padding-right: 20px;
+  border-right: 1px solid #ddd;
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
+.sidebar-fitter-collection h3 {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.color-filter {
+  max-width: 200px;
+}
+
+.color-filter h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.color-option {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.color-option input[type="radio"] {
+  display: none;
+}
+
+.color-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+/* Khi được chọn */
+.color-option input[type="radio"]:checked + .color-circle {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+.show-more {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.show-more a {
+  color: #000;
+  text-decoration: none;
+}
+
+.product-list-collection {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding-left: 20px;
+  flex-grow: 1;
+}
+.product-list-collection a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.product-card-collection {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  /*text-align: center;*/
+  border-radius: 8px;
+  position: relative;
+}
+
+.product-card-collection img {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-card-collection h4 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.new-price-collection {
+  font-weight: bold;
+  color: red;
+}
+
+.old-price-collection {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+
+.discount-collection {
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+.cart-icon-collection {
+  width: 28px;
+  height: 28px;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.page {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #ddd;
+  color: #666;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.page:hover {
+  background-color: #eee;
+}
+
+.page.active {
+  background-color: #a30000; /* Màu đỏ đậm */
+  color: white;
+  border: none;
+}

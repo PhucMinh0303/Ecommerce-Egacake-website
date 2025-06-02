@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tìm cửa hàng</title>
+    <link rel="stylesheet" href="assets/css/ega(main).css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="breadcrumbs">
+      Trang chủ / <strong>Hệ thống cửa hàng</strong>
+    </div>
+    <h1 class="store-title">Hệ thống cửa hàng</h1>
+    <div class="store-container">
+      <div class="store-info">
+        <h2>Tìm cửa hàng</h2>
+
+        <label for="city">Chọn tỉnh thành</label>
+        <select id="city">
+          <option value="hcm">Hồ Chí Minh</option>
+          <option value="hn">Hà Nội</option>
+        </select>
+        <div class="placeofchoice">
+          <!-- Hồ Chí Minh Branches -->
+          <div id="branches-hcm" class="branch-group">
+            <label for="branch-hcm">Chọn cửa hàng (HCM)</label>
+            <select id="branch-hcm">
+              <option value="gv">Chi nhánh Gò Vấp, HCM</option>
+              <option value="pn">Chi nhánh Phú Nhuận, HCM</option>
+              <option value="q1">Chi nhánh Quận 1, HCM</option>
+              <option value="q10">Chi nhánh Quận 10, HCM</option>
+            </select>
+          </div>
+
+          <!-- Hà Nội Branches -->
+          <div id="branches-hn" class="branch-group" style="display: none">
+            <label for="branch-hn">Chọn cửa hàng (HN)</label>
+            <select id="branch-hn">
+              <option value="bd">Chi nhánh Ba Đình, HN</option>
+              <option value="cg">Chi nhánh Cầu Giấy, HN</option>
+              <option value="ht">Chi nhánh Hàng Trống, HN</option>
+            </select>
+          </div>
+
+          <div class="store-address">
+            <h3><i class="fas fa-map-marker-alt"></i> Địa chỉ</h3>
+            <p id="address-text">
+              150 Nguyễn Duy Cung, phường 15, quận Gò Vấp, HCM
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="store-map">
+        <iframe
+          id="store-map-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.067101477198!2d106.65084527505452!3d10.806773358722838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175299c56f52a17%3A0x3c07e2c5f8d240fa!2zMTUwIE5ndXnhu4VuIER1eSBDdW5nLCBQaMaw4budbmcgMTUsIEfDsiBW4bqhcCwgSMOgIE7hu5lpIDEwMDAw!5e0!3m2!1svi!2s!4v1716952071036!5m2!1svi!2s"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="../../assets/js/map.js"></script>
+  </body>
+</html>

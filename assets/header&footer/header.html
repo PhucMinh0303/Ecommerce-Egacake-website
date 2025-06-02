@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/ega(main).css" />
+
+    <!--DS với <icon>-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css"
+    />
+    <!--sử dụng thư viện GSAP để tạo hiệu ứng chuyển động-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <!-- Banner trên cùng -->
+  <div class="top-banner">
+    <a href="#">
+      <img src="assets/img/section/top_banner.webp" alt="banner" />
+    </a>
+  </div>
+  <body>
+    <!-- Header chính -->
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo">
+          <img src="assets/img/logo/logo.png" alt="EGA Cake Logo" />
+          <!-- thay bằng logo thật nếu bạn có -->
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Bạn cần tìm" />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+          <div class="icon">
+            <i class="fas fa-file-invoice"></i><span>Đơn hàng</span>
+          </div>
+          <div class="icon">
+            <a href="map.html"
+              ><i class="fas fa-map-marker-alt"></i><span>Cửa hàng</span></a
+            >
+          </div>
+          <div class="icon">
+            <a href="login.html"
+              ><i class="fas fa-user"></i><span> Tài khoản </span></a
+            >
+          </div>
+          <div class="icon cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Giỏ hàng</span>
+            <div class="cart-count">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation menu -->
+      <nav class="main-nav">
+        <a href="../home.html">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Quà tặng 08/03</a>
+        <a href="#">Chương trình khuyến mãi</a>
+        <a href="#">Bánh ngon mỗi ngày</a>
+        <a href="#">Công thức làm bánh</a>
+        <a href="#">Chuyên mục làm bánh</a>
+        <a href="#">Liên hệ</a>
+      </nav>
+    </header>
+  </body>
+</html>

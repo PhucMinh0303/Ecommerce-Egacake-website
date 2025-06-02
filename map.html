@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ thống cửa hàng</title>
+    <link rel="stylesheet" href="assets/css/ega(main).css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Phần header sẽ được nhúng ở đây -->
+    <div id="header-placeholder"></div>
+
+    <!-- Nội dung chính - sẽ được tải từ main-map.html -->
+    <div id="main_map-placeholder"></div>
+
+    <!-- Phần footer sẽ được nhúng ở đây -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Tải nội dung main-map.html
+      fetch("main-map.html")
+        .then((response) => response.text())
+        .then((html) => {
+          // Chèn nội dung vào placeholder
+          document.getElementById("main_map-placeholder").innerHTML = html;
+
+          // Sau khi nội dung được tải, thực thi JavaScript
+          const script = document.createElement("script");
+          script.src = "assets/js/map.js";
+          document.body.appendChild(script);
+        })
+        .catch((error) => console.error("Error loading content:", error));
+    </script>
+
+    <script src="assets/js/ega.js"></script>
+  </body>
+</html>

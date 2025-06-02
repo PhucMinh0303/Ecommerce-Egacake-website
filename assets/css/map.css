@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4; /*Thuộc tính CSS thiết lập chiều cao của hộp dòng trong chế độ viết ngang*/
+  margin: 0;
+  padding: 0;
+  background: rgb(230, 225, 225);
+  box-sizing: border-box; /*bao gồm nội dung, phần đệm và đường viền, nhưng không bao gồm lề.*/
+}
+
+.store-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 10px;
+  padding: 30px 110px;
+  background: rgb(230, 225, 225);
+  background-size: cover;
+  flex-direction: row;
+  align-items: stretch;
+}
+.store-title {
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+}
+
+.store-info {
+  max-width: 350px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.store-info h2 {
+  color: #a00000;
+  margin-bottom: 1rem;
+}
+
+.store-info label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+.store-info select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.store-address h3 {
+  color: #a00000;
+  margin-bottom: 5px;
+}
+
+.store-address p {
+  margin: 0;
+}
+
+.store-map {
+  flex: 1;
+  min-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}

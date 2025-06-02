@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/ega(main).css" />
+
+    <!--DS với <icon>-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css"
+    />
+    <!--sử dụng thư viện GSAP để tạo hiệu ứng chuyển động-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+
+  <body>
+    <section class="egacake-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+          <span class="title">DANH MỤC SẢN PHẨM</span>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <i class="fa-solid fa-gift"></i>
+            <span>Tổng hợp khuyến mãi</span>
+          </li>
+          <li>
+            <i class="fa-regular fa-calendar-days"></i>
+            <span><a href="collections.html">Bộ sưu tập bánh</a></span>
+          </li>
+          <li>
+            <i class="fa-solid fa-eraser"></i>
+            <span>Bánh Chocolate</span>
+            <span class="arrow">›</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Bánh Mousse</span>
+            <span class="arrow">›</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-bread-slice"></i>
+            <span>Bánh Mì</span>
+            <span class="arrow">›</span>
+          </li>
+          <li>
+            <i class="fas fa-birthday-cake"></i>
+            <span>Bánh kem</span>
+            <span class="arrow">›</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-coins"></i>
+            <span>Bánh ngọt</span>
+            <span class="arrow">›</span>
+          </li>
+        </ul>
+      </aside>
+      <main class="main-content">
+        <div class="banner3">
+          <img
+            src="../assets/img/section/section-hone.png"
+            alt="Teabreak Banner"
+          />
+        </div>
+
+        <section class="coupon-codes">
+          <div class="coupon">
+            <h3>NHẬP MÃ: EGA50</h3>
+            <p>
+              Giảm 50% cho đơn hàng giá trị tối thiểu 500k. Mã giảm tối đa 200K
+            </p>
+            <button>Sao chép</button> <a href="#">Điều kiện</a>
+          </div>
+          <div class="coupon">
+            <h3>NHẬP MÃ: EGA15</h3>
+            <p>
+              Giảm 15% cho đơn hàng giá trị tối thiểu 500k. Mã giảm tối đa 100K
+            </p>
+            <button>Sao chép</button> <a href="#">Điều kiện</a>
+          </div>
+          <div class="coupon">
+            <h3>NHẬP MÃ: EGA99K</h3>
+            <p>Nhập mã EGA99K giảm ngay 99K</p>
+            <button>Sao chép</button> <a href="#">Điều kiện</a>
+          </div>
+          <div class="coupon">
+            <h3>NHẬP MÃ: FREESHIP</h3>
+            <p>Nhập mã FREESHIP miễn phí vận chuyển</p>
+            <button>Sao chép</button> <a href="#">Điều kiện</a>
+          </div>
+        </section>
+          <div class="deal-header">
+            <div class="title">
+              <h2>
+                MÙA YÊU, DEAL NGỌT
+                <span class="hot-tag"
+                  >HOT <i class="fa-solid fa-fire"></i
+                ></span>
+              </h2>
+              <p>
+                Giảm 30K cho đơn hàng từ 499K · Giảm 10% cho đơn hàng từ 800K ·
+                Giảm 30K cho đơn hàng từ 300K
+              </p>
+            </div>
+            <div class="countdown">
+              <span>Kết thúc sau</span>
+              <div class="timer">
+                <div><strong>14</strong><span>Giờ</span></div>
+                <div><strong>48</strong><span>Phút</span></div>
+                <div><strong>15</strong><span>Giây</span></div>
+              </div>
+            </div>
+          </div>
+        <section class="deal-section">
+          <div class="product-list">
+            <!-- Mỗi sản phẩm -->
+            <div class="product-card">
+              <img
+                src="../assets/img/products/Chocolate-Raspberry-Cupcakes-3-500x500.jpg"
+                alt="Bánh chocolate raspberry"
+              />
+              <h4>Bánh chocolate raspberry cupcakes</h4>
+              <p class="new-price">190.000đ </p>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+              <div class="sold-progress">
+                <i class="fa-solid fa-fire"></i> Đã bán 450 sản phẩm
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="../assets/img/products/Chocolate-Raspberry-Cupcakes-3-500x500.jpg"
+                alt="Bánh cupcake glory"
+              />
+              <h4>Bánh cupcake glory</h4>
+              <p class="new-price">110.000đ </p>
+              <div>
+                <span class="old-price">150.000đ</span> <span class="discount">-50%</span>
+              </div>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+              <div class="sold-progress">
+                <i class="fa-solid fa-fire"></i> Đã bán 260 sản phẩm
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="../assets/img/products/Chocolate-Raspberry-Cupcakes-3-500x500.jpg"
+                alt="Bánh cupcake queen"
+              />
+              <h4>Bánh cupcake queen</h4>
+              <p class="new-price">105.000đ </p>
+              <div>
+                <span class="old-price">150.000đ</span> <span class="discount">-50%</span>
+              </div>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+              <div class="sold-progress">
+                <i class="fa-solid fa-fire"></i> Đã bán 260 sản phẩm
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="../assets/img/products/Chocolate-Raspberry-Cupcakes-3-500x500.jpg"
+                alt="Bánh pumpkin spice"
+              />
+              <h4>Bánh pumpkin spice cupcakes</h4>
+              <p class="new-price">190.000đ </p>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+              
+              <div class="sold-progress">
+                <i class="fa-solid fa-fire"></i> Đã bán 235 sản phẩm
+              </div>
+            </div>
+          </div>
+
+          
+        </section>
+        <!-- Danh mục -->
+          <div class="category-list">
+            <div class="category-item">
+              <i class="fa-solid fa-fire"></i><br />Sản phẩm HOT
+            </div>
+            <div class="category-item">
+              <i class="fa-regular fa-circle"></i><br />Bánh kem nhỏ
+            </div>
+            <div class="category-item">
+              <i class="fa-solid fa-coins"></i><br />Bánh ngọt
+            </div>
+            <div class="category-item">
+              <i class="fas fa-birthday-cake"></i><br />Bánh kem
+            </div>
+            <div class="category-item">
+              <i class="fa-solid fa-bread-slice"></i><br />Bánh mì
+            </div>
+            <div class="category-item">
+              <i class="fa-solid fa-stroopwafel"></i><br />Bánh theo mùa
+            </div>
+            <div class="category-item">
+              <i class="fa-solid fa-bag-shopping"></i><br />Bánh đóng gói
+            </div>
+          </div>
+        <section class="valentine-header">
+          <i class="fa-solid fa-gift"></i> QUÀ VALENTINE
+        </section>
+        <section class="valentine-container2">
+          <div class="banner2">
+            <img
+              src="../assets/img/section/section_hot.webp"
+              alt="Valentine Banner"
+            />
+          </div>
+          
+          <div class="product2">
+            <img src="../assets/img/products/Heavy Duty Paper Car.png" alt="" />
+            <div class="product2-name">Mediocre Granite Plate</div>
+            <p class="new-price">820.000đ </p>
+              <div>
+                <span class="old-price">1.022.000đ</span> <span class="discount">-50%</span>
+              </div>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+            </div>
+          </div>
+          <div class="product2">
+            <img src="../assets/img/products/Heavy Duty Paper Car.png" alt="" />
+            <div class="product2-name">Heavy Duty Paper Car</div>
+            <p class="new-price">560.000đ </p>
+              <div>
+                <span class="old-price">720.000đ</span> <span class="discount">-50%</span>
+              </div>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+            </div>
+          </div>
+
+          <div class="product2">
+            <img src="../assets/img/products/Rustic Wooden Coat.png" alt="" />
+            <div class="product2-name">Rustic Wooden Coat</div>
+            <p class="new-price">1.560.000đ </p>
+              <div>
+                <span class="old-price">1.720.000đ</span> <span class="discount">-50%</span>
+              </div>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+            </div>
+          </div>
+
+          <div class="product2">
+            <img
+              src="../assets/img/products/Fantastic Plastic Watch.webp"
+              alt=""
+            />
+            <div class="product2-name">Fantastic Plastic Watch</div>
+            <p class="new-price"></p>
+            <div class="sold-out">Hết hàng</div>
+          </div>
+
+          <div class="product2">
+            <img
+              src="../assets/img/products/Incredible Cotton Shirt.png"
+              alt=""
+            />
+            <div class="product2-name">Incredible Cotton Shirt</div>
+            <p class="new-price">460.000đ </p>
+              <div>
+                <span class="old-price">720.000đ</span> <span class="discount">-50%</span>
+              </div>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+            </div>
+          </div>
+
+          <div class="product2">
+            <img
+              src="../assets/img/products/Lightweight Wool Keyboard.webp"
+              alt=""
+            />
+            <div class="product2-name">Lightweight Wool Keyboard</div>
+            <p class="new-price">930.000đ </p>
+              <div>
+                <span class="old-price">1.020.000đ</span> <span class="discount">-50%</span>
+              </div>
+              <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="view-all">
+          <button>Xem tất cả ›</button>
+        </div>
+        <div class="banner3">
+          <img
+            src="../assets/img/section/Teabreak.png"
+            alt="Teabreak Banner"
+          />
+        </div>
+
+        <div class="cupcake-section">
+          <h2><i class="fa-solid fa-coins"></i> BÁNH NGỌT</h2>
+          <div class="filters">
+            <button class="active">Cupcakes</button>
+            <button>Bánh cán lớp</button>
+            <button>Bánh cuộn</button>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <div class="product2">
+            <img src="../assets/img/products/cupcake1.png" alt="" />
+            <h4>Bánh sweet love cupcakes</h4>
+            <p class="new-price">190.000đ </p>
+            <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div> 
+          </div>
+
+          <div class="product2">
+            <img src="../assets/img/products/cupcake2.png" alt="" />
+            <h4>Bánh blue sky cupcakes</h4>
+            <p class="new-price">190.000đ </p>
+            <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div> 
+          </div>
+
+          <div class="product2">
+            <img src="../assets/img/products/cupcake3.png" alt="" />
+            <h4>Bánh red sugar flower cupcakes</h4>
+            <p class="new-price">190.000đ </p>
+            <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div> 
+          </div>
+
+          <div class="product2">
+            <img src="../assets/img/products/cupcake4.png" alt="" />
+            <h4>Bánh sangria cupcakes</h4>
+            <p class="new-price">190.000đ </p>
+            <div class="cart-icon"><i class="fas fa-shopping-bag"></i></div> 
+          </div>
+        </div>
+        <div class="view-all">
+          <button>Xem tất cả →</button>
+        </div>
+
+        <div class="promo-section">
+          <div class="promo-card">
+            <div
+              class="promo-image"
+              style="
+                background-image: url('../assets/img/products/29-sweet-bread-recipes-fb.jpg');
+              "
+            >
+              <div class="promo-text">
+                <span class="label">BÁNH MÌ</span>
+                <div class="circle-text">Mua 1<br />Tặng 1</div>
+                <button>ĐẶT NGAY</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="promo-card">
+            <div
+              class="promo-image"
+              style="
+                background-image: url('../assets/img/products/bigcake.jpg');
+              "
+            >
+              <div class="promo-text">
+                <span class="label">BÁNH KEM</span>
+                <div class="circle-text">Giảm<br />30%</div>
+                <button>ĐẶT NGAY</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="promo-card">
+            <div
+              class="promo-image"
+              style="
+                background-image: url('../assets/img/products/bánh su kem singapore.jpg');
+              "
+            >
+              <div class="promo-text">
+                <span class="label">BÁNH KEM NHỎ</span>
+                <div class="circle-text">Giảm<br />50%</div>
+                <button>ĐẶT NGAY</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefit-icons">
+          <div class="benefit-item">
+            <i class="fa-solid fa-truck"></i> Giao hàng đúng giờ
+          </div>
+          <div class="benefit-item">
+            <i class="fa-solid fa-gift"></i> Ưu đãi mỗi ngày
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-undo"></i> Đổi trả trong vòng 7 ngày
+          </div>
+        </div>
+        <div class="news-recipes">
+          <!-- Cột Tin Tức -->
+          <div class="news">
+            <div class="recipes-title">
+              <i class="fa-solid fa-newspaper"></i>
+              <h2>TIN TỨC</h2>
+            </div>
+            <div class="news-list">
+              <!-- Tin 1 -->
+              <div class="news-item">
+                <img src="../assets/img/news/cake-boat.jpg" alt="" />
+                <div class="news-text">
+                  <h3>KHỞI NGHIỆP THÀNH CÔNG TRONG NGÀNH BÁNH</h3>
+                  <p class="date">Thứ Hai, 07/02/2022</p>
+                  <p>
+                    Bạn nghĩ một người làm bánh giỏi là đã có thể mở hiệu bánh?
+                  </p>
+                </div>
+              </div>
+              <!-- Tin 2 -->
+              <div class="news-item">
+                <img src="../assets/img/news/Canberra-best-cake-shops.jpg" alt="" />
+                <div class="news-text">
+                  <h3>GỢI Ý 5 Ý TƯỞNG CONCEPT MỞ TIỆM BÁNH CỰC HÚT...</h3>
+                  <p class="date">Thứ Hai, 07/02/2022</p>
+                  <p>
+                    Khái niệm quán café, tiệm bánh concept đối với một số nước
+                  </p>
+                </div>
+              </div>
+              <!-- Tin 3 -->
+              <div class="news-item">
+                <img src="../assets/img/news/special-diet-cakes.jpg" alt="" />
+                <div class="news-text">
+                  <h3>BÁN BÁNH CHO NGƯỜI ĂN KIÊNG – Ý TƯỞNG KINH...</h3>
+                  <p class="date">Thứ Hai, 07/02/2022</p>
+                  <p>
+                    Xu hướng tìm đến các thực phẩm ăn kiêng, có lợi cho sức khỏe
+                    của
+                  </p>
+                </div>
+              </div>
+              <!-- Tin 4 -->
+              <div class="news-item">
+                <img src="../assets/img/news/expensive-cake.jpg" alt="" />
+                <div class="news-text">
+                  <h3>CÁC LOẠI BÁNH NGỌT NGON NHẤT THẾ GIỚI</h3>
+                  <p class="date">Thứ Hai, 07/02/2022</p>
+                  <p>
+                    Khám phá các loại bánh ngọt ngon và nổi tiếng nhất Thế Giới
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="view-all"><button>Xem tất cả ❯</button></div>
+          </div>
+
+          <!-- Cột Công Thức -->
+          <div class="news">
+            <div class="recipes-title">
+              <i class="fa-solid fa-receipt"></i>
+              <h2>CÔNG THỨC LÀM BÁNH</h2>
+            </div>
+            <div class="news-list">
+              <!-- Công thức 1 -->
+              <div class="news-item">
+                <img src="../assets/img/products/heavy-cream-la-gi.jpg" alt="" />
+                <div class="news-text">
+                  <h3>HỌC CÁCH LÀM BÁNH SU KEM BẰNG LÒ NƯỚNG CỰC...</h3>
+                  <p class="date">Thứ Hai, 07/02/2022</p>
+                  <p>
+                    Học cách làm bánh su kem bằng lò nướng để làm những chiếc
+                  </p>
+                </div>
+              </div>
+              <!-- Công thức 2 -->
+              <div class="news-item">
+                <img src="../assets/img/products/banh-su-kem-chien.webp" alt="" />
+                <div class="news-text">
+                  <h3>CÁCH LÀM BÁNH SU KEM CHIÊN GIÒN RỤM, THƠM...</h3>
+                  <p class="date">Thứ Hai, 07/02/2022</p>
+                  <p>
+                    Bánh su kem chiên là cái tên rất “hot” với những tín đồ ăn
+                    vặt
+                  </p>
+                </div>
+              </div>
+              <!-- Công thức 3 -->
+              <div class="news-item">
+                <img src="../assets/img/products/bánh su kem singapore.jpg" alt="" />
+                <div class="news-text">
+                  <h3>HỌC LỎM CÁCH LÀM BÁNH SU SINGAPORE “CHUẨN...</h3>
+                  <p class="date">Thứ Hai, 07/02/2022</p>
+                  <p>
+                    Hương vị ngọt ngào, thơm ngon của bánh su Singapore chắc hẳn
+                  </p>
+                </div>
+              </div>
+              <!-- Công thức 4 -->
+              <div class="news-item">
+                <img src="../assets/img/news/seafood-pizza.jpeg" alt="" />
+                <div class="news-text">
+                  <h3>CÁCH LÀM PIZZA HẢI SẢN – MÓN NGON CUỐI TUẦN CHO...</h3>
+                  <p class="date">Thứ Hai, 07/02/2022</p>
+                  <p>
+                    Pizza đã xuất hiện từ rất lâu trên thị trường bánh ở Việt
+                    Nam và
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="view-all"><button>Xem tất cả ❯</button></div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

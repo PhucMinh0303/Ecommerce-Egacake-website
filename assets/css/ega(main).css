@@ -5,7 +5,7 @@ body {
   line-height: 1.4; /*Thuộc tính CSS thiết lập chiều cao của hộp dòng trong chế độ viết ngang*/
   margin: 0;
   padding: 0;
-  background: rgb(231, 231, 231);
+  background-color: #f8f8f8;
   box-sizing: border-box; /*bao gồm nội dung, phần đệm và đường viền, nhưng không bao gồm lề.*/
 }
 /*header*/
@@ -267,7 +267,6 @@ body {
   margin: auto;
   gap: 10px;
   padding: 30px 110px;
-  background: white;
   background-size: cover;
 }
 
@@ -1602,16 +1601,6 @@ input[type="password-account"] {
 }
 
 /*map.css*/
-body {
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.4; /*Thuộc tính CSS thiết lập chiều cao của hộp dòng trong chế độ viết ngang*/
-  margin: 0;
-  padding: 0;
-  background: rgb(230, 225, 225);
-  box-sizing: border-box; /*bao gồm nội dung, phần đệm và đường viền, nhưng không bao gồm lề.*/
-}
 
 .store-container {
   display: flex;
@@ -1674,4 +1663,16 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/*shopping-cart.css*/
+.shopping-cart-section {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  min-height: 350px;
+  justify-content: center;
+}
+.shopping-cart {
 }

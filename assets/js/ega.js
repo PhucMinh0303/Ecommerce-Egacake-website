@@ -18,6 +18,10 @@ includeHTML("assets/header&footer/header.html", "header-placeholder");
 includeHTML("assets/header&footer/footer.html", "footer-placeholder");
 includeHTML("assets/main/mainhome.html", "mainhome-placeholder");
 includeHTML("assets/main/maincollections.html", "maincollections-placeholder");
-includeHTML("assets/products/mainproduct.html", "mainproduct-placeholder");
-includeHTML("assets/account/mainlogin.html", "mainlogin-placeholder");
-includeHTML("assets/map/main-map.html", "main_map-placeholder");
+includeHTML("assets/main/mainproduct.html", "mainproduct-placeholder");
+includeHTML("assets/main/mainlogin.html", "mainlogin-placeholder");
+includeHTML("assets/main/main-map.html", "main_map-placeholder");
+includeHTML(
+  "assets/shopping-cart/main-shopping-cart.html",
+  "mainshopping-cart-placeholder"
+);

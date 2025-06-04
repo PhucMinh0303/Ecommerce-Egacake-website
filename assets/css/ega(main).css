@@ -12,15 +12,17 @@ body {
 .top-banner {
   background: #a50a06;
   color: white;
-  padding: 0 120px 0 120px;
+  padding: 0 100px 0 100px;
   text-align: center;
   font-weight: bold;
   position: relative;
 }
+.top-banner a {
+  max-height: 44px;
+}
 
 .top-banner img {
   width: 100%;
-  height: 100%;
 }
 
 .main-header {
@@ -266,12 +268,12 @@ body {
   align-items: center;
   margin: auto;
   gap: 10px;
-  padding: 30px 110px;
+  padding: 15px 110px;
   background-size: cover;
 }
 
 .sidebar {
-  width: 280px;
+  width: 100%;
   background-color: white;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -279,7 +281,7 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden;
   position: sticky;
-  top: 110px; /* Giảm giá trị top xuống để sidebar bám dính sớm hơn */
+  top: 10px; /* Giảm giá trị top xuống để sidebar bám dính sớm hơn */
   align-self: flex-start; /* Đảm bảo sidebar căn theo chiều dọc */
   max-height: 100vh; /* Giới hạn chiều cao tối đa */
   overflow-y: auto; /* Thêm thanh cuộn nếu nội dung quá dài */
@@ -648,7 +650,7 @@ body {
   cursor: pointer;
 }
 .banner3 {
-  margin-top: 30px;
+  margin-top: 0px;
   margin-bottom: 30px;
 }
 .banner3 img {

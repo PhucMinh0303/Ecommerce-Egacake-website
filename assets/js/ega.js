@@ -22,6 +22,7 @@ includeHTML("assets/main/mainproduct.html", "mainproduct-placeholder");
 includeHTML("assets/main/mainlogin.html", "mainlogin-placeholder");
 includeHTML("assets/main/main-map.html", "main_map-placeholder");
 includeHTML(
-  "assets/shopping-cart/main-shopping-cart.html",
+  "assets/main/main-shopping-cart.html",
   "mainshopping-cart-placeholder"
 );
+includeHTML("assets/main/main-order.html", "main-order-placeholder");

@@ -275,16 +275,13 @@ body {
 .sidebar {
   width: 100%;
   background-color: white;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   overflow: hidden;
   position: sticky;
   top: 10px; /* Giảm giá trị top xuống để sidebar bám dính sớm hơn */
   align-self: flex-start; /* Đảm bảo sidebar căn theo chiều dọc */
-  max-height: 100vh; /* Giới hạn chiều cao tối đa */
-  overflow-y: auto; /* Thêm thanh cuộn nếu nội dung quá dài */
 }
 
 .sidebar-header {
@@ -321,7 +318,9 @@ body {
 .sidebar-menu li:hover {
   background-color: #f9f9f9;
 }
-
+.sidebar-menu li img {
+  width: 20px;
+}
 .sidebar-menu span {
   flex-grow: 1;
   color: #333;
@@ -341,10 +340,43 @@ body {
   color: #999;
   font-size: 16px;
 }
+.call-box {
+  display: flex;
+  align-items: center;
+  border: 2px dashed #a00;
+  border-radius: 6px;
+  padding: 10px;
+  width: fit-content;
+  color: #600;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+.cellphone-icon {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #e44;
+}
+
+.call-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.phone-number {
+  color: #a00;
+}
+
+.time-open {
+  font-size: 14px;
+  color: #333;
+}
 
 /*main-content*/
 .main-content {
-  flex: 3 0 3.2rem;
+  flex: 3 1 4.2rem;
 }
 
 .coupon-codes {
@@ -881,7 +913,7 @@ body {
   align-items: center;
   margin: auto;
   gap: 10px;
-  padding: 30px 110px;
+  padding: 15px 110px;
   background: while;
   background-size: cover;
   flex-direction: column;
@@ -1041,7 +1073,7 @@ body {
   font-size: 14px;
   color: #666;
   padding-left: 110px;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .product-page {
@@ -1532,7 +1564,6 @@ h2 {
   margin: 0;
 }
 .login-container {
-  background-color: white;
   padding: 30px;
   /*border-radius: 12px;*/
   width: 500px;
@@ -1611,8 +1642,7 @@ input[type="password-account"] {
   margin: auto;
   gap: 10px;
   padding: 30px 110px;
-  background: rgb(230, 225, 225);
-  background-size: cover;
+
   flex-direction: row;
   align-items: stretch;
 }
@@ -1668,13 +1698,141 @@ input[type="password-account"] {
 }
 
 /*shopping-cart.css*/
-.shopping-cart-section {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  align-items: center;
-  min-height: 350px;
-  justify-content: center;
+.cart-empty {
+  margin-top: 60px;
+  text-align: center;
 }
-.shopping-cart {
+
+.cart-empty img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.cart-empty h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cart-empty p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.cart-empty button {
+  background: white;
+  color: #e53935;
+  border: 1px solid #e53935;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-empty button:hover {
+  background-color: #e53935;
+  color: white;
+}
+
+/*order.css*/
+.order-section {
+  margin: auto;
+  gap: 10px;
+  padding: 30px 110px;
+
+  flex-direction: row;
+  align-items: stretch;
+}
+.order-check-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 30px 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+}
+.order-check {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 400px;
+  padding: 20px 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-check h2 {
+  color: #b71c1c;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 16px 0;
+}
+
+.check-type-order {
+  margin-bottom: 16px;
+}
+
+.check-type-order label {
+  margin-right: 16px;
+}
+.check-type-order input[type="radio"] {
+  margin-right: 5px;
+}
+
+.numbertext {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.check-button {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.check-button button {
+  background-color: #b71c1c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.check-button button:hover {
+  background-color: #a31818;
+}
+
+.order-list {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 400px;
+  padding: 20px 30px;
+  width: 750px;
+}
+
+.result-box {
+  text-align: center;
+  color: #b71c1c;
+  font-weight: bold;
+}
+
+.result-box i {
+  font-size: 80px;
 }

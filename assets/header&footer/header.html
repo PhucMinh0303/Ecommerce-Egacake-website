@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Header</title>
     <link rel="stylesheet" href="assets/css/ega(main).css" />
 
     <!--DS với <icon>-->
@@ -19,12 +19,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
   <!-- Banner trên cùng -->
-  <div class="top-banner">
-    <a href="#">
-      <img src="assets/img/section/top_banner.webp" alt="banner" />
-    </a>
-  </div>
+
   <body>
+    <div class="top-banner" id="topBanner">
+      <a href="#">
+        <img src="assets/img/section/top_banner.webp" alt="banner" />
+      </a>
+      <button class="close-btn" onclick="closeTopBanner()">×</button>
+    </div>
     <!-- Header chính -->
     <header class="main-header">
       <div class="header-container">
@@ -64,13 +66,40 @@
       <!-- Navigation menu -->
       <nav class="main-nav">
         <a href="../home.html">Trang chủ</a>
-        <a href="#">Giới thiệu</a>
+        <a href="../introduce.html">Giới thiệu</a>
         <a href="#">Quà tặng 08/03</a>
-        <a href="#">Chương trình khuyến mãi</a>
-        <a href="#">Bánh ngon mỗi ngày</a>
-        <a href="#">Công thức làm bánh</a>
-        <a href="#">Chuyên mục làm bánh</a>
-        <a href="#">Liên hệ</a>
+
+        <div class="dropdown">
+          <a href="#" class="menu-toggle"
+            >Chương trình khuyến mãi <i class="fa-solid fa-caret-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <a href="#">Landing Page - Flash Sales</a>
+            <a href="#">Landing Page - Black Friday</a>
+            <a href="#">Landing Page - XMas</a>
+            <a href="#">Landing Page - FnB</a>
+          </div>
+        </div>
+
+        <a href="../collections.html">Bánh ngon mỗi ngày</a>
+        <div class="dropdown">
+          <a href="#" class="menu-toggle"
+            >Công thức / Chuyên mục <i class="fa-solid fa-caret-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <a href="#">Công thức làm bánh</a>
+            <a href="#">Chuyên mục làm bánh</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" class="menu-toggle"
+            >Liên hệ <i class="fa-solid fa-caret-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <a href="../contant.html">Góp ý / Khiếu nại</a>
+          </div>
+        </div>
       </nav>
     </header>
   </body>

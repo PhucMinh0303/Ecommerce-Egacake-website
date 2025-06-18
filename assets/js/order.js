@@ -1,37 +1,83 @@
-function checkOrder() {
-  const input = document.getElementById("input").value.trim();
+document.addEventListener("DOMContentLoaded", function () {
+  // Get DOM elements
+  const checkByRadios = document.querySelectorAll('input[name="checkby"]');
+  const inputLabel = document.getElementById("input-label");
+  const inputField = document.querySelector(".numbertext");
+  const orderList = document.querySelector(".order-list");
   const resultBox = document.getElementById("result");
 
-  // Giả định dữ liệu rỗng để demo
-  if (input === "") {
-    alert("Vui lòng nhập thông tin để kiểm tra!");
-    resultBox.style.display = "none";
+  // Initially hide the order list section
+  orderList.style.display = "none";
+
+  // Add event listeners for radio buttons
+  checkByRadios.forEach((radio) => {
+    radio.addEventListener("change", function () {
+      if (this.value === "phone") {
+        inputLabel.textContent = "Số điện thoại";
+        inputField.placeholder = "0909 xxx xxx";
+      } else if (this.value === "email") {
+        inputLabel.textContent = "Email";
+        inputField.placeholder = "example@domain.com";
+      }
+    });
+  });
+});
+
+function checkOrder() {
+  const inputField = document.querySelector(".numbertext");
+  const orderList = document.querySelector(".order-list");
+  const resultBox = document.getElementById("result");
+
+  // Get the search value and type
+  const searchValue = inputField.value.trim();
+  const searchType = document.querySelector(
+    'input[name="checkby"]:checked'
+  ).value;
+
+  // Validate input
+  if (!searchValue) {
+    alert("Vui lòng nhập thông tin để kiểm tra");
     return;
   }
 
-  // Ví dụ: kiểm tra nếu không khớp dữ liệu
-  const fakeOrders = []; // không có đơn hàng
-  const found = fakeOrders.includes(input);
+  // Show the order list section
+  orderList.style.display = "block";
 
-  if (!found) {
-    resultBox.style.display = "block";
-  } else {
-    resultBox.innerHTML = "<p>Đã tìm thấy đơn hàng của bạn!</p>";
-    resultBox.style.display = "block";
-  }
+  // Here you would typically make an AJAX call to your backend
+  // For this example, we'll just simulate a response
+
+  // Simulate API call with timeout
+  setTimeout(() => {
+    // This is where you would process the real data from your backend
+    // For now, we'll just show the "no data found" message
+    resultBox.innerHTML = `
+            <p>Không tìm thấy dữ liệu đơn hàng</p>
+            <i class="fa-solid fa-credit-card"></i>
+        `;
+
+    // If you had real data, you would display it here
+    // For example:
+    /*
+        if (orders.length > 0) {
+            let html = '<div class="order-items">';
+            orders.forEach(order => {
+                html += `
+                    <div class="order-item">
+                        <p>Mã đơn hàng: ${order.id}</p>
+                        <p>Ngày đặt: ${order.date}</p>
+                        <p>Tổng tiền: ${order.total}</p>
+                        <p>Trạng thái: ${order.status}</p>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            resultBox.innerHTML = html;
+        } else {
+            resultBox.innerHTML = `
+                <p>Không tìm thấy dữ liệu đơn hàng</p>
+                <i class="fa-solid fa-credit-card"></i>
+            `;
+        }
+        */
+  }, 500);
 }
-
-// Cập nhật label khi chuyển radio
-document.querySelectorAll('input[name="checkby"]').forEach((radio) => {
-  radio.addEventListener("change", function () {
-    const label = document.getElementById("input-label");
-    const input = document.getElementById("input");
-    if (this.value === "phone") {
-      label.innerText = "Số điện thoại";
-      input.placeholder = "0909 xxx xxx";
-    } else {
-      label.innerText = "Email";
-      input.placeholder = "email@example.com";
-    }
-  });
-});

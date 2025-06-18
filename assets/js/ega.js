@@ -26,3 +26,44 @@ includeHTML(
   "mainshopping-cart-placeholder"
 );
 includeHTML("assets/main/main-order.html", "main-order-placeholder");
+includeHTML("assets/main/main-introduce.html", "introduce-placeholder");
+includeHTML("assets/main/main-contant.html", "contant-placeholder");
+
+// Kiểm tra nếu đã từng tắt banner
+window.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("hideTopBanner") === "true") {
+    document.getElementById("topBanner").style.display = "none";
+  }
+});
+
+function closeTopBanner() {
+  document.getElementById("topBanner").style.display = "none";
+  localStorage.setItem("hideTopBanner", "true");
+}
+
+// Kiểm tra dropdown menu
+document.addEventListener("DOMContentLoaded", function () {
+  // Lấy các phần tử cần thiết
+  const menuToggle = document.querySelector(".menu-toggle");
+  const dropdownContent = document.querySelector(".dropdown-content");
+  const dropdown = document.querySelector(".dropdown");
+
+  // Thêm sự kiện khi di chuột vào
+  dropdown.addEventListener("mouseenter", function () {
+    dropdownContent.style.display = "block";
+  });
+
+  // Thêm sự kiện khi di chuột ra
+  dropdown.addEventListener("mouseleave", function () {
+    dropdownContent.style.display = "none";
+  });
+
+  // (Tùy chọn) Đảm bảo dropdown không đóng khi di chuột vào nội dung
+  dropdownContent.addEventListener("mouseenter", function () {
+    dropdownContent.style.display = "block";
+  });
+
+  dropdownContent.addEventListener("mouseleave", function () {
+    dropdownContent.style.display = "none";
+  });
+});

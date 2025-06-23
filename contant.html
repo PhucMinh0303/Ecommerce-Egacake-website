@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="assets/css/ega(main).css" />
+    <!-- Load Font Awesome trước để đảm bảo icons hoạt động -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -12,7 +17,30 @@
     <div id="header-placeholder"></div>
 
     <!-- Nội dung chính -->
-    <div id="contant-placeholder"></div>
+    <div id="main-contant-placeholder"></div>
+
+    <script>
+      // Tải nội dung main-contant.html
+      fetch("assets/main/main-contant.html")
+        .then((response) => response.text())
+        .then((html) => {
+          // Chèn nội dung vào placeholder
+          document.getElementById("main-contant-placeholder").innerHTML = html;
+
+          // Tải và thực thi JavaScript sau khi nội dung HTML đã được chèn
+          return new Promise((resolve) => {
+            const script = document.createElement("script");
+            script.src = "assets/js/contant.js";
+            script.onload = resolve;
+            document.body.appendChild(script);
+          });
+        })
+        .then(() => {
+          // Các script đã được tải, có thể thực hiện các thao tác khác nếu cần
+          console.log("Nội dung và script đã được tải xong");
+        })
+        .catch((error) => console.error("Error loading content:", error));
+    </script>
 
     <!-- Phần footer sẽ được nhúng ở đây -->
     <div id="footer-placeholder"></div>

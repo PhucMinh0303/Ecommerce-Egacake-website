@@ -22,17 +22,24 @@
     <div id="footer-placeholder"></div>
 
     <script>
-      // Tải nội dung main-map.html
+      // Tải nội dung main-contant.html
       fetch("assets/main/main-map.html")
         .then((response) => response.text())
         .then((html) => {
           // Chèn nội dung vào placeholder
           document.getElementById("main_map-placeholder").innerHTML = html;
 
-          // Sau khi nội dung được tải, thực thi JavaScript
-          const script = document.createElement("script");
-          script.src = "assets/js/map.js";
-          document.body.appendChild(script);
+          // Tải và thực thi JavaScript sau khi nội dung HTML đã được chèn
+          return new Promise((resolve) => {
+            const script = document.createElement("script");
+            script.src = "assets/js/map.js";
+            script.onload = resolve;
+            document.body.appendChild(script);
+          });
+        })
+        .then(() => {
+          // Các script đã được tải, có thể thực hiện các thao tác khác nếu cần
+          console.log("Nội dung và script đã được tải xong");
         })
         .catch((error) => console.error("Error loading content:", error));
     </script>

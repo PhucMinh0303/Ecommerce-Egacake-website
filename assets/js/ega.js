@@ -27,7 +27,7 @@ includeHTML(
 );
 includeHTML("assets/main/main-order.html", "main-order-placeholder");
 includeHTML("assets/main/main-introduce.html", "introduce-placeholder");
-includeHTML("assets/main/main-contant.html", "contant-placeholder");
+includeHTML("assets/main/main-contant.html", "main-contant-placeholder");
 
 // Kiểm tra nếu đã từng tắt banner
 window.addEventListener("DOMContentLoaded", function () {

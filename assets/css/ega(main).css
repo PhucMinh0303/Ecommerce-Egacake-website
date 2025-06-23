@@ -734,6 +734,13 @@ body {
   border-radius: 20px;
   cursor: pointer;
 }
+.banner-slider {
+  position: relative;
+  max-width: 1250px;
+  margin: auto;
+  overflow: hidden;
+}
+
 .banner3 {
   margin-top: 0px;
   margin-bottom: 30px;
@@ -742,6 +749,31 @@ body {
   width: 100%;
   display: block;
   border-radius: 8px;
+}
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.nav:hover {
+  background-color: #ddd;
+}
+
+.nav.prev {
+  left: 10px;
+}
+
+.nav.next {
+  right: 10px;
 }
 
 .cupcake-section {
@@ -756,6 +788,7 @@ body {
 }
 
 .cupcake-section h2 {
+  margin-top: 10px;
   font-size: 18px;
 }
 
@@ -1914,29 +1947,18 @@ input[type="password-account"] {
   margin: auto;
   padding: 30px 110px;
   gap: 40px;
-  background-color: #0d1124;
-  color: white;
+  color: black;
 }
 
 /* CONTACT INFO */
 .contact-info {
   width: 45%;
 }
-.contact-info span {
-  color: #8ed0b9;
-}
 
 .contact-info h2 {
   font-size: 40px;
   margin-bottom: 10px;
-  color: #dddddd;
-}
-
-.contact-info p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #ffffff;
+  color: black;
 }
 
 .contact-details {
@@ -1948,11 +1970,6 @@ input[type="password-account"] {
 }
 .diachi {
   flex-basis: 100% !important;
-}
-.contact-details p {
-  color: #bfbfbf;
-  margin: 5px 0 15px 0;
-  font-size: 14px;
 }
 
 .dc-email {
@@ -1973,8 +1990,7 @@ input[type="password-account"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #0d1124; /* nền tối như ảnh */
-  color: white;
+  color: black;
   font-family: Arial, sans-serif;
 }
 
@@ -1988,10 +2004,10 @@ input[type="password-account"] {
 }
 
 .contact-form li:focus-within i {
-  color: #8ed0b9; /* Ví dụ: xanh dạ quang */
+  color: #fbbd08;
 }
 .contact-form li:focus-within {
-  border-bottom: 1px solid #8ed0b9;
+  border-bottom: 1px solid #fbbd08;
 }
 
 .contact-form li i {
@@ -2001,20 +2017,20 @@ input[type="password-account"] {
   min-width: 20px;
 }
 
-input[type="text"],
+.contact-form input[type="text"],
 input[type="email"],
 textarea {
   flex: 1;
   padding: 10px;
-  background-color: transparent;
+  background-color: #f8f8f8;
   border: none;
-  color: white;
+  color: black;
   font-size: 16px;
   outline: none;
 }
 
 textarea.large-textarea {
-  height: 100px;
+  height: 150px;
   width: 100%;
   resize: vertical;
 }
@@ -2030,15 +2046,15 @@ textarea::placeholder {
 .send-btn {
   display: block; /* Chuyển thành block để có thể dùng margin auto */
   padding: 10px 20px;
-  background-color: #0d1124;
-  color: #8ed0b9;
-  border: 1px solid #8ed0b9;
+  color: #fbbd08;
+  border: 1px solid #fbbd08;
   border-radius: 5px;
   font-size: 16px;
+  width: 100%;
 }
 
 .send-btn:hover {
-  background-color: #8ed0b9;
+  background-color: #fbbd08;
   color: #000;
 }
 .send-btn i {
@@ -2050,29 +2066,6 @@ textarea::placeholder {
   margin-top: 40px;
   /*justify-content: space-between;*/
 }
-/* SOCIAL ICONS */
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.social-icons a {
-  color: #525f81;
-  width: 27px;
-  height: 27px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  color: #5cb85c;
-  transform: scale(1.1);
-}
 
 /* MAP */
 .map {
@@ -2082,3 +2075,4 @@ textarea::placeholder {
   border-radius: 15px;
   overflow: hidden;
 }
+/*install img, video*/

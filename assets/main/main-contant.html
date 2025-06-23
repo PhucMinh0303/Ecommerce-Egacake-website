@@ -16,24 +16,23 @@
 
     <div class="contact-container">
       <div class="contact-info">
-        <h2><span>Liên hệ</span> với chúng tôi</h2>
-        <p>
-          Mọi thắc mắc và yêu cầu cần hỗ trợ từ chúng tôi, vui lòng để lại thông
-          tin tại đây. Chúng tôi sẽ xem xét và gửi phản hồi sớm nhất.
-        </p>
+        <h2>Góp ý, liên hệ và khiếu nại</h2>
+
         <div class="contact-details">
           <div class="diachi">
             <strong>Địa chỉ:</strong>
-            <p>241 A Chu Văn An, Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+            <p class="description">
+              150/8 Nguyễn Duy Cung, Phường 12, TP Hồ Chí Minh
+            </p>
           </div>
           <div class="dc-email">
             <div>
               <strong>Điện thoại:</strong>
-              <p>0287.308.1880</p>
+              <p class="description">0287.308.1880</p>
             </div>
             <div>
               <strong>Email:</strong>
-              <p>info@vdtdata.vn</p>
+              <p class="description">support@sapo.vn</p>
             </div>
           </div>
         </div>
@@ -66,16 +65,38 @@
             ></textarea>
           </li>
         </ul>
+        <!-- Thêm phần HTML cho nút đính kèm và hiển thị file -->
+        <div class="attachment-area" style="margin-top: 20px">
+          <button
+            type="button"
+            class="attach-button"
+            style="
+              background: #f0f0f0;
+              border: 1px dashed #ccc;
+              padding: 8px 15px;
+              cursor: pointer;
+              border-radius: 4px;
+            "
+          >
+            <i class="fa-solid fa-paperclip"></i> Đính kèm tệp
+          </button>
+          <input
+            type="file"
+            id="file-input"
+            multiple
+            accept="image/*,video/*"
+            style="display: none"
+          />
+          <div
+            class="attachments-preview"
+            style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px"
+          ></div>
+        </div>
 
         <div class="button-icons">
           <button type="submit" class="send-btn">
             Gửi liên hệ <i class="fa-solid fa-paper-plane"></i>
           </button>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
         </div>
       </div>
       <div class="map">
@@ -87,9 +108,9 @@
           allowfullscreen=""
           loading="lazy"
         >
-          <img src="img/img_du_an/logo-vdt.svg" alt="VDT Logo" />
         </iframe>
       </div>
     </div>
+    <script src="../../assets/js/contant.js"></script>
   </body>
 </html>

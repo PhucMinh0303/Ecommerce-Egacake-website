@@ -105,12 +105,14 @@
         </button>
       </aside>
       <main class="main-content">
-        <div class="banner3">
-          <img
-            src="../assets/img/section/section-hone.png"
-            alt="Teabreak Banner"
-          />
+        <div class="banner-slider">
+          <button class="nav prev">&lt;</button>
+          <div class="banner3">
+            <img id="banner-img" src="../assets/img/section/section-home.png" alt="Teabreak Banner" />
+          </div>
+          <button class="nav next">&gt;</button>
         </div>
+
 
         <section class="coupon-codes">
           <div class="coupon">
@@ -344,13 +346,13 @@
         <div class="cupcake-section">
           <h2><i class="fa-solid fa-coins"></i> BÁNH NGỌT</h2>
           <div class="filters">
-            <button class="active">Cupcakes</button>
-            <button>Bánh cán lớp</button>
-            <button>Bánh cuộn</button>
+            <button class="active" data-filter="cupcakes">Cupcakes</button>
+            <button data-filter="banh-can-lop">Bánh cán lớp</button>
+            <button data-filter="banh-cuon">Bánh cuộn</button>
           </div>
         </div>
 
-        <div class="product-grid">
+        <div class="product-grid" id="product-grid">
           <div class="product2">
             <img src="../assets/img/products/cupcake1.png" alt="" />
             <h4>Bánh sweet love cupcakes</h4>

@@ -17,6 +17,29 @@
     <!-- Phần footer sẽ được nhúng ở đây -->
     <div id="footer-placeholder"></div>
 
+    <script>
+      // Tải nội dung main-contant.html
+      fetch("assets/main/mainproduct.html")
+        .then((response) => response.text())
+        .then((html) => {
+          // Chèn nội dung vào placeholder
+          document.getElementById("mainproduct-placeholder").innerHTML = html;
+
+          // Tải và thực thi JavaScript sau khi nội dung HTML đã được chèn
+          return new Promise((resolve) => {
+            const script = document.createElement("script");
+            script.src = "assets/js/product.js";
+            script.onload = resolve;
+            document.body.appendChild(script);
+          });
+        })
+        .then(() => {
+          // Các script đã được tải, có thể thực hiện các thao tác khác nếu cần
+          console.log("Nội dung và script đã được tải xong");
+        })
+        .catch((error) => console.error("Error loading content:", error));
+    </script>
+
     <script src="assets/js/ega.js"></script>
   </body>
 </html>
